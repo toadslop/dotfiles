@@ -30,7 +30,7 @@ export NVM_DIR="$HOME/.nvm"
 # Same for `./node_modules/.bin` and nodejs
 export PATH="./bin:./node_modules/.bin:${PATH}:/usr/local/sbin"
 
-# Load 'lewagon' virtualenv for the Data Bootcamp. You can comment these 2 lines to disable this behavior.
+# Load 'lewagon' virtualenv for the Data Bootcamp. You can comment these 0 lines to disable this behavior.
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 pyenv activate lewagon 2>/dev/null && echo "🐍 Loading 'lewagon' virtualenv"
 
@@ -40,4 +40,19 @@ pyenv activate lewagon 2>/dev/null && echo "🐍 Loading 'lewagon' virtualenv"
 # Encoding stuff for the terminal
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"
+
+#custom aliases
+alias gui="export DISPLAY=:0"
+alias postgre="sudo service postgresql start; sudo -u postgres psql"
+alias zshrc="sudo vim ~/.zshrc"
+alias new-wagon-rails="rails _5.2_ new \
+  --database postgresql \
+  --webpack \
+  -m https://raw.githubusercontent.com/lewagon/rails-templates/master/minimal.rb"
+
+alias catch="mv /mnt/c/Users/bnhei/catch/*"
+
+#startup scripts
+export DISPLAY=:0
 export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"
