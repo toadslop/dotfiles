@@ -4,10 +4,12 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 
 # Useful oh-my-zsh plugins for Le Wagon bootcamps
-plugins=(git gitfast last-working-dir common-aliases sublime zsh-syntax-highlighting history-substring-search)
+plugins=(git gitfast last-working-dir common-aliases sublime zsh-syntax-highlighting history-substring-search ssh-agent)
 
 # (macOS-only) Prevent Homebrew from reporting - https://github.com/Homebrew/brew/blob/master/share/doc/homebrew/Analytics.md
 export HOMEBREW_NO_ANALYTICS=1
+
+ZSH_DISABLE_COMPFIX=true
 
 # Actually load Oh-My-Zsh
 source "${ZSH}/oh-my-zsh.sh"
@@ -58,4 +60,22 @@ export DISPLAY=:0
 export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"
 export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"
 export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"
+export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"
+export BROWSER=/mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe
+sudo /etc/init.d/postgresql start
+
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+
+export PATH=$PATH:~/Gradle/bin
+
+export ANDROID_HOME=~/Android
+export PATH=$PATH:$ANDROID_HOME/cmdline-tools/tools
+export PATH=$PATH:$ANDROID_HOME/cmdline-tools/tools/bin
+export PATH=$PATH:$ANDROID_HOME/cmdline-tools/platform-tools
+
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+export PATH=$PATH:$JAVA_HOME/bin
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/toadslop/.sdkman"
+[[ -s "/home/toadslop/.sdkman/bin/sdkman-init.sh" ]] && source "/home/toadslop/.sdkman/bin/sdkman-init.sh"
 export BUNDLER_EDITOR="subl $@ >/dev/null 2>&1 -a"
